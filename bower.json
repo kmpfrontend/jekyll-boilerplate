@@ -1,0 +1,26 @@
+{
+  "name": "Work Boilerplate",
+  "authors": [
+    "Chris Dutton <chris.dutton@kmp.co.uk>"
+  ],
+  "description": "Boilerplate built using Jekyll",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.0",
+    "jquery.customSelect": "latest",
+    "velocity": "~1.2.3",
+    "fastclick": "^1.0.6",
+    "breakpoint-sass": "~2.6.1",
+    "retina.js": "^1.3.0"
+  }
+}

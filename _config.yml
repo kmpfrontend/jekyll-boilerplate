@@ -1,0 +1,31 @@
+# Syntax highlighting
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+#permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Jekyll Boilerplate
+source: frontend
+destination: compiled
+markdown: kramdown
+#baseurl: "localhost:3000/"
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+include: ["_pages", "_components"]
+#permalink: /:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - scss
+
+keep_files:
+  - css
+  - images
+  - js
+  - fonts
