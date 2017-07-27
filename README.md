@@ -1,4 +1,4 @@
-#Boilerplate with Jekyll
+# Boilerplate with Jekyll
 
 This new build uses Jekyll, https://jekyllrb.com/docs/installation/
 
@@ -21,7 +21,7 @@ Then once it is installed, just run
     grunt
 
 
-##Installation/Setup
+## Installation/Setup
 
 To create a new site you will need to open a terminal and run the following commands::
 
