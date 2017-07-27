@@ -29,7 +29,7 @@ To create a new site you will need to open a terminal and run the following comm
 
     bower install
 
-##Jekyll 
+## Jekyll 
 
 As we now use Jekyll, the frontend setup is slightly different to how the Assemble site's are. Each component is still added into the _components and _includes folder's but there is some additional info needed for each at the top, like here: 
 
@@ -42,7 +42,7 @@ There are lots of tutorials on how to use Jekyll, we moved to Jekyll as this is 
 
 
 
-##Bower
+## Bower
 
 All <a href="http://blog.teamtreehouse.com/getting-started-bower">bower</a> is setup to go so if you need to add a new library then just find the bower reference, for example:
 
@@ -78,17 +78,17 @@ If CSS styling is needed to be included from the plugin, for example fancybox. F
 
 The above will make sure the CSS styles from the plugin will be added into the bower partial. DO NOT edit the bower partial directly.
 
-##Directory Structure
+## Directory Structure
 
 frontend - contains all the source code and html   
 backend - for backend devs   
 compiled - compiled front end code (this is ignored from repo and never should be touched)
 
-##Frontend Build
+## Frontend Build
 
     grunt
 
-##Font Sizes and Measurements
+## Font Sizes and Measurements
 
 Font sizing is done via REM.
 
@@ -111,19 +111,19 @@ To convert a px value to % to be relative to the main width of the design then d
     	padding-bottom: c(54);
     }
 
-##Adding Sass files
+## Adding Sass files
 
 Add a new sass file to one of the directories, if there is a _all.scss file then there is no need to add this to the main core sass file, it will automatically add this in.
 
-##Default Plugins
+## Default Plugins
 
 I have added in 2 well used plugin's to the sass build, this is for the slider and datepicker, which will have the correct styling in place
 
-##Sliders/Carousels
+## Sliders/Carousels
 
 We use Slick Slider to create our carousels/sliders. [More Info](http://kenwheeler.github.io/slick/)
 
-##Media Queries
+## Media Queries
 
 For media queries we are using breakpoint-sass. http://breakpoint-sass.com/
 
@@ -164,7 +164,7 @@ For retina files, use the correct variable
 
 [More Info](https://github.com/at-import/breakpoint/wiki/Advanced-Media-Queries#resolution-media-queries)
 
-##Retina Images
+## Retina Images
 
 Retina.js will automatically look for 2x versions, just save a file with @2x at the end and the plugin will do the rest. So
 
@@ -178,7 +178,7 @@ To add this to the CSS files, a mixin has been created and to call it, do the fo
 
     @include retina-js("/images/white-slider-arrow", png, 15px, 57px);
 
-##Commenting
+## Commenting
 
 All code to be commented as well as possible, not too much but enough so you or anyone else would understand this in 6 months time when the project is no longer fresh in your mind. Below are a few examples of simple commenting which would help
 
@@ -204,17 +204,17 @@ but if there are a few items to comment it is best to do as follows:
     }
 
 
-##Javascript
+## Javascript
 
 As mentioned above we use Bower for the js to pull in the libraries. To create new functions these are done in the ui.js file. There is a main self invoking anonymous function and all individual functions are declared in here and then called within "initAll" which self invokes. Anything in "initAll" will run on load as the file is included in the HTML and the bottom of the doc so no need to use Doc Ready. We use the Revealing Module Pattern in larger functions [More Info](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript)
 
 
-##jQuery Library
+## jQuery Library
 
 I have been adding reuseable jQuery snippets to codepen. As we tend to use various methods more than once it seems a good idea to create a stripped down version of each on here. If you create something new, like a zoomable map, then once you have added this on the site, please add it to the codepen site, so this can be easily reused. Take a look at some of the examples on here, so you can see how they should be added. [View KMP CodePen](https://codepen.io/kmp/)
 
 
-##PostCSS/Browser Fallbacks
+## PostCSS/Browser Fallbacks
 
 Do not worry about browser fallbacks such as code like this:
 
@@ -227,7 +227,7 @@ This is how to write it as postcss add's in any other fallbacks if needed.
     border-radius:10px;
 
 
-##Grid Layout
+## Grid Layout
 
 PostCSS Lost Grid system is used. The lost framework docs can be found here: https://github.com/peterramsing/lost
 
@@ -247,7 +247,7 @@ PostCSS Lost Grid system is used. The lost framework docs can be found here: htt
     }
 
 
-##SVG's
+## SVG's
 
 We are using a mixin that can do a SVG as a background image with PNG fallback.
 
@@ -258,7 +258,7 @@ Export the SVG from sketch and save the file inside the 'svg' folder which is in
     <span class="icon-logo">
 
 
-##Image Sprites
+## Image Sprites
 
 Save images in the sprite folder and also the 2x version. Grunt will create the image sprite. Amend the size attributes in the variables sass include.
 
@@ -280,7 +280,7 @@ Inside the variables include you will need to add the size of the sprint-2x.png.
     $width-2x: 64px;
     $height-2x: 64px;
 
-##BEM
+## BEM
 
 We use BEM method of coding. There are loads of resources online about this, it maybe best to look over recent projects such as Tensar, MSP, Bruntwood to see how we have coded these.
 
@@ -359,7 +359,7 @@ If this title is only ever going to be inside here, then can split it out and no
      </div>
 
 
-##Form Styling
+## Form Styling
 
 We wrap each input/label in a new div.
 
@@ -378,7 +378,7 @@ We usually style up input/radio buttons to get something like below.
 You would do the same with a radio button but changing the class on the container and also the type on the input tag.
 
 
-##General Formatting
+## General Formatting
 
 2 tabs indentation is required. Use a new line for every block, list or table element, and indent every such child element by 2 tabs
 
@@ -443,7 +443,7 @@ I would suggest using this method but using the variables.scss mixin to reassign
     // Global Variables
     $primary: $yellow;
 
-##Seo
+## Seo
 
 Only use 1 h1 tag on the page, we could add multiple h1 tags within section tags etc but ideally stick to one unless otherwise asked not to.
 
@@ -454,7 +454,7 @@ Add title tags to all links and alt tags to all images. Try keep the html and cs
 We use Grunt as a task runner along with many plugin's to make the build more efficient. If any edits or any additions to this file need to be added then they need to be placed inside the folder 'grunt', inside here each plugin will go inside config. You should not need to edit anything inside the tasks folder, but sometimes a plugin may need something adding to the main grunt task.
 
 
-##Assemble (older sites)
+## Assemble (older sites)
 
 We use <a href="http://assemble.io/docs/">assemble</a> to create the includes and to build the site pages. The <span>default.hbs</span> is the main layout page, this is used on all components etc unless another layout is needed but this should not be needed.
 
@@ -558,7 +558,7 @@ site-pages.json file looks similar as follows:
             {
                 "basename": "book-demo",
 
-##Versions
+## Versions
 
 21/4/16 - Added the sprite retina mixins back in. Added modernizr into the site so not pulling a dead URL in the console. Changed svgNew to svg.
 
